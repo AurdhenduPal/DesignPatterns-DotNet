@@ -14,13 +14,18 @@ namespace DesignPatterns.ConsoleApp.Creational.SingletonPattern
 
         public static SingletonLogger GetInstance()
         {
-            lock (_lock)
+            //Check if instance is null if null then check for lock
+            if (_instance == null)
             {
-                if (_instance == null)
+                lock (_lock)
                 {
-                    _instance = new SingletonLogger();
+                    if (_instance == null)
+                    {
+                        _instance = new SingletonLogger();
+                    }
                 }
             }
+
 
             return _instance;
         }
