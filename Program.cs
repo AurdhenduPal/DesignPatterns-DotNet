@@ -1,4 +1,5 @@
-﻿using DesignPatterns.ConsoleApp.Creational.FactoryPattern_Simple;
+﻿using DesignPatterns.ConsoleApp.Creational.FactoryPattern_GOF;
+using DesignPatterns.ConsoleApp.Creational.FactoryPattern_Simple;
 using DesignPatterns.ConsoleApp.Creational.SingletonPattern;
 
 internal class Program
@@ -10,5 +11,8 @@ internal class Program
 
         //calling from factory design pattern
         FactoryPattern_SimpleDemoRun.Run();
+
+        //calling from factory design pattern - GOF
+        FactoryPattern_GOF_DemoRun.Run();
     }
 }
